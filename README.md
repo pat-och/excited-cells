@@ -1,4 +1,5 @@
-excited-cells
+Excited-cells
+-------------
 
 Un nombre de cellules sensibles sont ordonnées dans un cercle et chacune communique avec ses deux voisines. Dans la séquence de cellules, la première et la dernière sont voisins.
 
@@ -19,3 +20,28 @@ Exemple :
 Si K = 2 et la configuration initiale est 1,0,1,1 alors :
 - la configuration après 1 étape sera : 1,0,1,0
 - la configuration après 2 étapes sera : 0,0,0,0.
+
+how to
+------
+1. Développement du module qui permet de gérer un seul envoi de signaux simultanés
+2. Module qui permet de gérer plusieurs envois de signaux simultanés consécutifs
+
+Stack
+-----
+Symfony 5
+
+php 7.4
+
+phpunit 9
+
+Install
+-------
+git clone xxxxxxxxxxxxxxxxxxxxxxxxx
+then run composer install
+
+Test
+-------------
+Unit test acceptance oriented in /tests directory
+
+run php bin/phpunit tests
+
