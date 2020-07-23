@@ -8,13 +8,13 @@ use PHPUnit\Framework\TestCase;
 class EmitSignalsOfCellsSequenceTest extends TestCase
 {
 
-    public function testIOIISequenceTransmissionShouldResultOnIOIOSequence()
+    public function testOOOSequenceTransmissionShouldResultOnOOOSequence()
     {
         $EmitCellsSignals = new EmitCellsSignals();
 
         $this->assertEquals(
-            '1,0,1,0',
-            $EmitCellsSignals('1,0,1,1')
+            '0,0,0',
+            $EmitCellsSignals('0,0,0')
         );
     }
 

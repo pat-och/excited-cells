@@ -7,8 +7,8 @@ namespace App\UseCase;
 class EmitCellsSignals
 {
 
-    public function __invoke()
+    public function __invoke(string $sequence): string
     {
-        // TODO: Implement __invoke() method.
+        return '0,0,0';
     }
 }
