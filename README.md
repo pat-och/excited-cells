@@ -28,7 +28,7 @@ how to
 
 Stack
 -----
-Symfony 5
+Symfony 5.x
 
 php 7.4
 
