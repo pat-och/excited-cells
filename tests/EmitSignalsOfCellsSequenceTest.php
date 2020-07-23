@@ -2,6 +2,7 @@
 
 namespace App\Tests;
 
+use App\UseCase\EmitCellsSignals;
 use PHPUnit\Framework\TestCase;
 
 class EmitSignalsOfCellsSequenceTest extends TestCase
