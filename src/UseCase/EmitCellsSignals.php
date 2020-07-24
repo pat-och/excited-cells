@@ -36,10 +36,10 @@ class EmitCellsSignals
         return implode(',', $finalCells);
     }
 
-    private function initFinalCells(int $countInitialCells): array
+    private function initFinalCells(int $count): array
     {
         $i = 0;
-        while ($i < $countInitialCells) {
+        while ($i < $count) {
             $finalCells[] = 1;
             $i++;
         }
