@@ -2,6 +2,7 @@
 
 namespace App\Tests;
 
+use App\UseCase\SendMultipleSignalPackets;
 use PHPUnit\Framework\TestCase;
 
 class SendMultipleSignalPacketsTest extends TestCase
