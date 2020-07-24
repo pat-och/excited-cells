@@ -8,6 +8,6 @@ class SendMultipleSignalPackets
 {
     public function __invoke()
     {
-        // TODO: Implement __invoke() method.
+        return '0,0,0,0';
     }
 }
