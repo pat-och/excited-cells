@@ -28,6 +28,9 @@ class SendMultipleSignalPacketsTest extends TestCase
             array(2, '1,0,1,1', '0,0,0,0')
         );
 
+        $fileRepository = new InMemoryParameterRepository();
+        $outline = $fileRepository->getFileContents();
+
         $sendMultipleSignalPackets = new SendMultipleSignalPackets();
 
         foreach ($outline as $example) {
