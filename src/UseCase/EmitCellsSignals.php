@@ -14,16 +14,18 @@ class EmitCellsSignals
 
         $newCells = array(1,1,1);
 
-        if ($initialCells[2] === $initialCells[1]) {
-            $newCells[0] = 0;
-        }
+        foreach ($initialCells as $key => $value) {
+            if ($key === 0 && ($initialCells[2] === $initialCells[1])) {
+                $newCells[$key] = 0;
+            }
 
-        if ($initialCells[0] === $initialCells[2]) {
-            $newCells[1] = 0;
-        }
+            if ($key === 1 && ($initialCells[0] === $initialCells[2])) {
+                $newCells[$key] = 0;
+            }
 
-        if ($initialCells[1] === $initialCells[0]) {
-            $newCells[2] = 0;
+            if ($key === 2 && ($initialCells[1] === $initialCells[0])) {
+                $newCells[$key] = 0;
+            }
         }
 
         return implode(',', $newCells);
