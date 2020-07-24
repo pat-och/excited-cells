@@ -9,20 +9,18 @@ use App\PrimaryPort\ParameterRepositoryInterface;
 class InMemoryParameterRepository implements ParameterRepositoryInterface
 {
 
-    public function getParameters()
+    private array $parameters;
+
+    public function getParameters(): array
     {
-        return array(
-            array(1, '0,0,0'),
-            array(1, '0,0,1'),
-            array(1, '0,1,0'),
-            array(1, '1,0,0'),
-            array(1, '0,1,1'),
-            array(1, '1,0,1'),
-            array(1, '1,1,0'),
-            array(1, '1,1,1'),
-            array(1, '1,0,1,1'),
-            array(1, '1,0,1,0'),
-            array(2, '1,0,1,1')
+        return $this->parameters;
+    }
+
+    public function addParameter(int $steps, string $sequence): void
+    {
+        $this->parameters[] = array(
+            $steps,
+            $sequence
         );
     }
 }
