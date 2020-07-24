@@ -27,8 +27,8 @@ class EmitSignalsOfCellsSequenceTest extends TestCase
             '1,0,1,0' => '0,0,0,0',
         ];
 
+        $EmitCellsSignals = new EmitCellsSignals();
         foreach ($outline as $input => $expected) {
-            $EmitCellsSignals = new EmitCellsSignals();
 
             $this->assertEquals(
                 $expected,
