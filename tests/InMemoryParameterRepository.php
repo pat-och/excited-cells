@@ -18,9 +18,6 @@ class InMemoryParameterRepository implements ParameterRepositoryInterface
 
     public function addParameter(int $steps, string $sequence): void
     {
-        $this->parameters[] = array(
-            $steps,
-            $sequence
-        );
+        $this->parameters[] = array($steps, $sequence);
     }
 }
