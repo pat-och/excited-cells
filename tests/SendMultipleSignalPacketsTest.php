@@ -18,7 +18,7 @@ class SendMultipleSignalPacketsTest extends TestCase
 
         $this->assertEquals(
             '0,0,0,0',
-            $sendMultipleSignalPackets(2, '1,0,1,1')
+            $sendMultipleSignalPackets('1,0,1,1', 2)
         );
     }
 
