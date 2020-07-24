@@ -21,17 +21,9 @@ class EmitCellsSignals
                 $previousCell = $initialCells[$key - 1];
             }
 
-            if ($key === 0) {
-
+            $nextCell = $initialCells[0];
+            if (array_key_exists($key + 1, $initialCells)) {
                 $nextCell = $initialCells[$key + 1];
-            }
-
-            if ($key === 1) {
-                $nextCell = $initialCells[$key + 1];
-            }
-
-            if ($key === count($initialCells) - 1) {
-                $nextCell = $initialCells[0];
             }
 
             if ($nextCell === $previousCell) {
