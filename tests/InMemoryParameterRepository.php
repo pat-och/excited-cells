@@ -4,7 +4,9 @@
 namespace App\Tests;
 
 
-class InMemoryParameterRepository
+use App\PrimaryPort\ParameterRepositoryInterface;
+
+class InMemoryParameterRepository implements ParameterRepositoryInterface
 {
 
     public function getParameters()
