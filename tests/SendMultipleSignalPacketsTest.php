@@ -11,15 +11,32 @@ class SendMultipleSignalPacketsTest extends TestCase
     /**
      * @test
      */
-    public function IOIIintoOOOOwith2steps()
+    public function SendMultipleSignalPacketsShouldReturnExpectedSequence()
     {
+
+        $outline = array(
+            array(1, '0,0,0', '0,0,0'),
+            array(1, '0,0,1', '1,1,0'),
+            array(1, '0,1,0', '1,0,1'),
+            array(1, '1,0,0', '0,1,1'),
+            array(1, '0,1,1', '0,1,1'),
+            array(1, '1,0,1', '1,0,1'),
+            array(1, '1,1,0', '1,1,0'),
+            array(1, '1,1,1', '0,0,0'),
+            array(1, '1,0,1,1', '1,0,1,0'),
+            array(1, '1,0,1,0', '0,0,0,0'),
+            array(2, '1,0,1,1', '0,0,0,0')
+        );
 
         $sendMultipleSignalPackets = new SendMultipleSignalPackets();
 
-        $this->assertEquals(
-            '0,0,0,0',
-            $sendMultipleSignalPackets('1,0,1,1', 2)
-        );
+        foreach ($outline as $example) {
+
+            $this->assertEquals(
+                $example[2],
+                $sendMultipleSignalPackets($example[1], $example[0])
+            );
+        }
     }
 
 }
