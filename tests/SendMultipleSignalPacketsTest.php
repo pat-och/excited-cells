@@ -29,7 +29,7 @@ class SendMultipleSignalPacketsTest extends TestCase
         );
 
         $fileRepository = new InMemoryParameterRepository();
-        $outline = $fileRepository->getFileContents();
+        $outline = $fileRepository->getParameters();
 
         $sendMultipleSignalPackets = new SendMultipleSignalPackets();
 
