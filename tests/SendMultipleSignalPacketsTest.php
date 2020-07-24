@@ -14,18 +14,18 @@ class SendMultipleSignalPacketsTest extends TestCase
     public function SendMultipleSignalPacketsShouldReturnExpectedSequence()
     {
 
-        $outline = array(
-            array(1, '0,0,0', '0,0,0'),
-            array(1, '0,0,1', '1,1,0'),
-            array(1, '0,1,0', '1,0,1'),
-            array(1, '1,0,0', '0,1,1'),
-            array(1, '0,1,1', '0,1,1'),
-            array(1, '1,0,1', '1,0,1'),
-            array(1, '1,1,0', '1,1,0'),
-            array(1, '1,1,1', '0,0,0'),
-            array(1, '1,0,1,1', '1,0,1,0'),
-            array(1, '1,0,1,0', '0,0,0,0'),
-            array(2, '1,0,1,1', '0,0,0,0')
+        $expected = array(
+            '0,0,0',
+            '1,1,0',
+            '1,0,1',
+            '0,1,1',
+            '0,1,1',
+            '1,0,1',
+            '1,1,0',
+            '0,0,0',
+            '1,0,1,0',
+            '0,0,0,0',
+            '0,0,0,0'
         );
 
         $fileRepository = new InMemoryParameterRepository();
@@ -33,11 +33,11 @@ class SendMultipleSignalPacketsTest extends TestCase
 
         $sendMultipleSignalPackets = new SendMultipleSignalPackets();
 
-        foreach ($outline as $example) {
+        foreach ($outline as $key => $parameter) {
 
             $this->assertEquals(
-                $example[2],
-                $sendMultipleSignalPackets($example[1], $example[0])
+                $expected[$key],
+                $sendMultipleSignalPackets($parameter[1], $parameter[0])
             );
         }
     }
