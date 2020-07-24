@@ -12,7 +12,11 @@ class EmitCellsSignals
 
         $initialCells = explode(',', $sequence);
 
-        $finalCells = array(1,1,1);
+        $i = 0;
+        while ($i < count($initialCells)) {
+            $finalCells[] = 1;
+            $i++;
+        }
 
         foreach ($initialCells as $key => $value) {
 
