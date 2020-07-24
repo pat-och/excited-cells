@@ -4,6 +4,8 @@
 namespace App\UseCase;
 
 
+use phpDocumentor\Reflection\Types\Integer;
+
 class EmitCellsSignals
 {
 
@@ -12,11 +14,7 @@ class EmitCellsSignals
 
         $initialCells = explode(',', $sequence);
 
-        $i = 0;
-        while ($i < count($initialCells)) {
-            $finalCells[] = 1;
-            $i++;
-        }
+        $finalCells = $this->initFinalCells(count($initialCells));
 
         foreach ($initialCells as $key => $value) {
 
@@ -36,5 +34,16 @@ class EmitCellsSignals
         }
 
         return implode(',', $finalCells);
+    }
+
+    private function initFinalCells(int $countInitialCells): array
+    {
+        $i = 0;
+        while ($i < $countInitialCells) {
+            $finalCells[] = 1;
+            $i++;
+        }
+
+        return $finalCells;
     }
 }
