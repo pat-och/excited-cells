@@ -6,12 +6,12 @@ namespace App\UseCase;
 
 class SendMultipleSignalPackets
 {
-    public function __invoke(string $sequence, int $k)
+    public function __invoke(string $sequence, int $k): string
     {
         $emitCellsSignals = new EmitCellsSignals();
 
         $i = 0;
-        while ($i <= $k) {
+        while ($i < $k) {
             $sequence = $emitCellsSignals($sequence);
             $i++;
         }
