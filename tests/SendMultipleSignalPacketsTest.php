@@ -29,11 +29,11 @@ class SendMultipleSignalPacketsTest extends TestCase
         );
 
         $fileRepository = new InMemoryParameterRepository();
-        $outline = $fileRepository->getParameters();
+        $parameters = $fileRepository->getParameters();
 
         $sendMultipleSignalPackets = new SendMultipleSignalPackets();
 
-        foreach ($outline as $key => $parameter) {
+        foreach ($parameters as $key => $parameter) {
 
             $this->assertEquals(
                 $expected[$key],
