@@ -16,22 +16,25 @@ class EmitCellsSignals
 
         foreach ($initialCells as $key => $value) {
 
+            $previousCell = $initialCells[count($initialCells) - 1];
+            if (array_key_exists($key - 1, $initialCells)) {
+                $previousCell = $initialCells[$key - 1];
+            }
+
             if ($key === 0) {
-                $previous = $initialCells[2];
-                $next = $initialCells[1];
+
+                $nextCell = $initialCells[$key + 1];
             }
 
             if ($key === 1) {
-                $previous = $initialCells[0];
-                $next = $initialCells[2];
+                $nextCell = $initialCells[$key + 1];
             }
 
-            if ($key === 2) {
-                $previous = $initialCells[1];
-                $next = $initialCells[0];
+            if ($key === count($initialCells) - 1) {
+                $nextCell = $initialCells[0];
             }
 
-            if ($next === $previous) {
+            if ($nextCell === $previousCell) {
                 $finalCells[$key] = 0;
             }
         }
