@@ -4,7 +4,7 @@
 namespace App\Tests;
 
 
-use App\PrimaryPort\ParameterRepositoryInterface;
+use App\SecondaryPort\ParameterRepositoryInterface;
 
 class InMemoryParameterRepository implements ParameterRepositoryInterface
 {

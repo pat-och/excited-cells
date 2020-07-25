@@ -2,7 +2,7 @@
 
 namespace App\Tests;
 
-use App\PrimaryPort\ParameterRepositoryInterface;
+use App\SecondaryPort\ParameterRepositoryInterface;
 use App\UseCase\SendMultipleSignalPackets;
 use PHPUnit\Framework\TestCase;
 
