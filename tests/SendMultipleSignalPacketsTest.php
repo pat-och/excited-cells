@@ -46,7 +46,11 @@ class SendMultipleSignalPacketsTest extends TestCase
             array(1, '1,1,1'),
             array(1, '1,0,1,1'),
             array(1, '1,0,1,0'),
-            array(2, '1,0,1,1')
+            array(2, '1,0,1,1'),
+            array(1, '1,0,1,1,0,1,0,1,1,1'),
+            array(1, '1,0,1,1,0,0,0,1,0,0'),
+            array(1, '0,0,1,1,1,0,1,0,1,1'),
+            array(3, '1,0,1,1,0,1,0,1,1,1'),
         );
 
         foreach ($inputs as $input) {
@@ -68,7 +72,11 @@ class SendMultipleSignalPacketsTest extends TestCase
             '0,0,0',
             '1,0,1,0',
             '0,0,0,0',
-            '0,0,0,0'
+            '0,0,0,0',
+            '1,0,1,1,0,0,0,1,0,0',
+            '0,0,1,1,1,0,1,0,1,1',
+            '1,1,1,0,1,0,0,0,1,1',
+            '1,1,1,0,1,0,0,0,1,1',
         );
     }
 
