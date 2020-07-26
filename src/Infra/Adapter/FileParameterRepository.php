@@ -21,6 +21,9 @@ class FileParameterRepository implements ParameterRepositoryInterface
 
         $lines = explode('\r\n', $content);
         foreach ($lines as $line) {
+            if ($line === '')
+                break;
+
             $items = explode(';', $line);
             $this->parameters[] = array($items[0], $items[1]);
         }
