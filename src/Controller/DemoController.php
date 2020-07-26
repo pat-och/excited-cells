@@ -15,8 +15,10 @@ class DemoController extends AbstractController
     public function index(ParameterRepositoryInterface $parameterRepository)
     {
         $parameters = $parameterRepository->getParameters();
+
         $results = array();
         $sendMultipleSignalPackets = new SendMultipleSignalPackets();
+        
         foreach ($parameters as $parameter) {
             $results[] = array(
                 'steps' => $parameter[0],
@@ -26,7 +28,6 @@ class DemoController extends AbstractController
         }
 
         return $this->render('demo/index.html.twig', [
-            'controller_name' => 'DemoController',
             'results' => $results
         ]);
     }
