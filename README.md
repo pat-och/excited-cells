@@ -49,6 +49,7 @@ Reste à faire
 * refactorer vers des entités Cell et Parameter (Transformation Priority Premise)
 * refactorer le retour du Use case SendMultipleSignalPackets qui ne devrait pas se préoccuper de la présentation (CQS)
 * refactorer les tests afin que les méthode de test ne fassent que quelques lignes ( 3, 4 max si possible)
+* créer une arborescence de fichier ad-hoc dans `src`
 
 
 Stack
